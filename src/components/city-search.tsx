@@ -48,11 +48,11 @@ const CitySearch = () => {
     <>
       <Button
         variant={"outline"}
-        className="relative w-full justify-start text-sm text-muted-foreground sm:pr-12 md:w-40 lg:w-64"
+        className="relative  justify-start text-sm text-muted-foreground sm:pr-12 sm:w-20 md:w-40 lg:w-64"
         onClick={() => setOpen(true)}
       >
         <Search className="mr-2 h-4 w-4" />
-        Search cities...
+        <span className="hidden md:inline md:visible">Search cities...</span>
       </Button>
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput
