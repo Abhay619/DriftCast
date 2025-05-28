@@ -14,6 +14,7 @@ const CurrentWeather = ({ data, locationName }: CurrentWeatherProps) => {
   } = data;
 
   const formatTemp = (temp: number) => `${Math.round(temp)}º`;
+  // console.log(locationName?.name);
 
   return (
     <Card className="overflow-hidden shadow-xl dark:border-zinc-800 border-zinc-300">
