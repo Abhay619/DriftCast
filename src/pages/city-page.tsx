@@ -8,6 +8,7 @@ import HourlyTemperature from "@/components/hourly-temperature";
 import WeatherDetails from "@/components/weather-details";
 import WeatherForecast from "@/components/weather-forecast";
 import FavoriteButton from "@/components/favorite-button";
+import WeatherGlobe from "@/components/weather-globe";
 
 const CityPage = () => {
   const [searchParams] = useSearchParams();
@@ -58,10 +59,16 @@ const CityPage = () => {
           <HourlyTemperature data={forecastQuery.data} />
         </div>
         <div className="grid gap-6 md:grid-cols-2 items-start">
+          <div className="grid grid-cols-1 gap-4">
+            
           {/* details */}
           <WeatherDetails data={weatherQuery.data} />
+          
+          <WeatherGlobe data={weatherQuery.data}/>
+          </div>
           {/* forecast */}
           <WeatherForecast data={forecastQuery.data} />
+
         </div>
       </div>
     </div>
