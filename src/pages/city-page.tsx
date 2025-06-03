@@ -9,6 +9,7 @@ import WeatherDetails from "@/components/weather-details";
 import WeatherForecast from "@/components/weather-forecast";
 import FavoriteButton from "@/components/favorite-button";
 import WeatherGlobe from "@/components/weather-globe";
+import FavoriteCities from "@/components/favorite-cities";
 
 const CityPage = () => {
   const [searchParams] = useSearchParams();
@@ -40,6 +41,8 @@ const CityPage = () => {
   return (
     <div className="space-y-4">
       {/* Favorite Cities */}
+            <FavoriteCities/>
+
       <div className="flex items-center justify-between">
         <h1 className="text-3xl font-bold tracking-tight">
           {params.cityName}, {weatherQuery.data.sys.country}
